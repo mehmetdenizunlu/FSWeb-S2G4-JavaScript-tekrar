@@ -110,22 +110,73 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+sayilar.forEach((sayi)=> {
+  enbuyuk = sayilar[0]
+  if(sayi> enbuyuk) {
+    enbuyuk = sayi;
+  }
+})
 
+sayilar.forEach((sayi) => {
+  enkucuk = sayilar[0];
+  if(sayi<enkucuk) {
+     enkucuk = sayi;
+  }
+})
+
+console.log("en büyük sayı = " + enbuyuk)
+console.log("en küçük sayı = " + enkucuk)
 /* kodlar buraya */
 
+
+
 // 3b çözümü:
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if(sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+})
+
+console.log(ucetambolunenler);
 
 /* kodlar buraya */
 
 // 3c çözümü:
 
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc,sayi) => {
+ return acc+=sayi;
+},0)
+
+console.log("uce bölğnenlerin toplamı = " + ucebolunenlerintoplami)
+
 /* kodlar buraya */
 
 // 3d çözümü
 
+besyuzdenkucuksayilar = []
+
+besyuzdenkucuksayilar = [
+  ...besyuzdenkucuksayilar,
+  ...sayilar.filter((sayi) => sayi>500)
+];
+
+console.log("500 den büyük sayılar =" + besyuzdenkucuksayilar)
+
 /* kodlar buraya */
 
 // 3e çözümü
+
+siralisayilar=[];
+
+siralisayilar = [
+  ...siralisayilar,
+  ...besyuzdenkucuksayilar.sort((a,b) => a-b)
+];
+
+console.log(siralisayilar)
+
+
 
 /* kodlar buraya */
 
